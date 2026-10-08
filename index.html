@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>همینو | بازار آنلاین</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="top">همینو؛ بازار آنلاین کالاهای نو در سراسر ایران</div>
+  <div class="nav">
+    <div class="logo">همینو</div>
+    <input id="search" placeholder="جست‌وجوی کالا، برند یا فروشگاه..." />
+    <button>ورود / ثبت‌نام</button>
+    <button class="cart" onclick="openCart()">🛒 سبد خرید <span id="cartCount">۰</span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <h1>همه‌چیز، همینو پیدا کن.</h1>
+    <p>بازار آنلاین چندفروشنده‌ای برای خرید کالاهای نو از فروشندگان سراسر ایران.</p>
+    <a href="#products" class="primary">شروع خرید</a>
+    <a href="#seller" class="secondary">فروشنده شوید</a>
+  </div>
+  <div class="hero-card"><strong>همینو</strong><span>شروع کوچک، آینده بزرگ</span></div>
+</section>
+
+<h2>دسته‌بندی‌ها</h2>
+<div class="categories">
+  <div>🏠 لوازم خانگی</div><div>🍳 لوازم آشپزخانه</div><div>⚡ لوازم برقی</div>
+  <div>📺 صوتی و تصویری</div><div>🔧 ابزار</div><div>📱 کالای دیجیتال</div>
+</div>
+
+<div class="section-head">
+  <h2 id="products">محصولات منتخب</h2><span>نسخه آزمایشی</span>
+</div>
+<div id="productGrid" class="products"></div>
+
+<section id="seller" class="seller">
+  <div>
+    <h2>فروشنده شوید</h2>
+    <p>کالاهای نو خود را در همینو عرضه کنید و به مشتریان سراسر ایران دسترسی داشته باشید.</p>
+    <button class="primary" onclick="alert('ثبت‌نام فروشنده در نسخه بعدی فعال می‌شود.')">ثبت‌نام فروشنده</button>
+  </div>
+  <div class="seller-box">پنل فروشنده<br><small>محصولات · سفارش‌ها · فروش · کمیسیون</small></div>
+</section>
+</main>
+
+<div id="cartOverlay" class="cart-overlay" onclick="closeCart(event)">
+  <aside class="cart-panel" onclick="event.stopPropagation()">
+    <div class="cart-header">
+      <h2>🛒 سبد خرید</h2>
+      <button class="close" onclick="closeCart()">×</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total-row"><span>مجموع:</span><strong id="cartTotal">۰ تومان</strong></div>
+      <button class="checkout" onclick="checkout()">ادامه و ثبت سفارش</button>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <strong>همینو</strong> — بازار آنلاین چندفروشنده‌ای ایران<br>
+  <small>این نسخه یک نمونه اولیه است و هنوز به پرداخت، سفارش واقعی و پنل سرور متصل نیست.</small>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
